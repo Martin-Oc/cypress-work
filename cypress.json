@@ -1,0 +1,25 @@
+{
+    "defaultCommandTimeout" : 8000,
+
+    "baseUrl":"https://myu-advanced.myu-awstest.uniqa.cloud/master/login/dashboard",
+ 
+
+
+    "env": 
+    {
+        "Rahulshetty-purchase" : "https://myuniqa-regression.myu-awstest.uniqa.cloud/my-uniqa/login",
+        "Rahulshetty-practice" : "https://rahulshettyacademy.com/AutomationPractice/",
+        "myUNIQA-mobile": "https://myu-advanced.myu-awstest.uniqa.cloud/master/login/dashboard"
+    },
+    "chromeWebSecurity": false,
+    "experimentalSourceRewriting":false,
+    
+    "viewportWidth":1000,
+    "viewportHeight":660,
+    "experimentalSessionSupport": false,
+    "hosts":null,
+    "video":false,
+    "isInteractive": false
+    
+}
+    
