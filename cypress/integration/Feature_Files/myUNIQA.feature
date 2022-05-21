@@ -70,30 +70,27 @@ Feature: First testing
             | Vertragsbeginn | 01.05.2011                                |
         Then Log out.
 
+
+
     Scenario: Capcha test
         Given Navigate to CPR page
         Then Fill up data
         Then Verify same page
-
-
 
     @focus
     Scenario Outline: Contract tab: <title>
         Given Navigate to myUNIQA development environment.
         Given Log in with "<user>".
         And I visit "<type>" number "<number>" in "<title>".
-        #And "contractsPage" is opened
-        #Then "<tab>" tab is shown
-        #Then tab is shown
-        #And "<tab>" has text "text:<text>"
-        #And "<hidden tab>" tab is not shown
+        Then "<raise-claim>" and upload file.
         Then Log out.
 
         Examples:
-            | user                 | type   | number | title       | tab                            |
-            | gntester             | health | 1      | Gesundheit  | contractsPage.getHealthTab     |
-            | ectester002          | car    | 1      | Absicherung | components.segments.provident  |
-            | testernotactivated01 | life   | 2      | Vorsorge    | contractsPage.getProtectionTab |
-            | sibirien2            | health | 3      | Gesundheit  | contractsPage.getProvidentTab  |
-            | rsperner2            | no     |        | no contract | skip                           |
+            | user                 | type   | number | title       | raise-claim |
+            | gntester             | health | 1      | Gesundheit  | no          |
+            | ectester002          | car    | 1      | Absicherung | no          |
+            | testernotactivated01 | life   | 2      | Vorsorge    | no          |
+            | sibirien2            | health | 3      | Gesundheit  | no          |
+            | rsperner2            | no     |        | no contract | no          |
+            | eddreher             | health | 1      | Gesundheit  | yes         |
 

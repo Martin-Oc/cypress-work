@@ -9,7 +9,8 @@
     {
         "Rahulshetty-purchase" : "https://myuniqa-regression.myu-awstest.uniqa.cloud/my-uniqa/login",
         "Rahulshetty-practice" : "https://rahulshettyacademy.com/AutomationPractice/",
-        "myUNIQA-mobile": "https://myu-advanced.myu-awstest.uniqa.cloud/master/login/dashboard"
+        "myUNIQA-mobile": "https://myu-advanced.myu-awstest.uniqa.cloud/master/login/dashboard",
+        "Mall": "https://mall.sk"
     },
     "chromeWebSecurity": false,
     "experimentalSourceRewriting":false,

@@ -163,27 +163,22 @@ And('I visit {string} number {string} in {string}.', (element, number, title) =>
         cy.get('[data-cy="section_name_web-Vorsorge"]').should('not.exist')
     }
     cy.wait(2000)
+    cy.get('a[data-tosca="header_uniqa-link"]').click()
 })
 
 
+Then('{string} and upload file.', (raise_claim) => {
+ if (raise_claim === 'no')
+ {
 
+ } else if(raise_claim === 'yes')
+ {
+    cy.get('button[data-cy="claim_submission_button-health"]').click()
 
+ }
+})
 
-Then('tab is shown', () => {
-   // if (element === 'no') {
-        cy.wait(2000)
-
-        dashboard.openHealtTab.click()
-     /* contractsPage.getHealthTab.should('not.exist');
-      contractsPage.getProtectionTab.should('not.exist');
-      contractsPage.getProvidentTab.should('not.exist'); */
-   // } else {
-   //   eval(element).should('be.visible');
-   // }
-  });
-
-
-  And('{string} tab is not shown', (element) => {
+And('{string} tab is not shown', (element) => {
     if (element === 'skip') {
       cy.log('step skipped for this test');
     } else {
