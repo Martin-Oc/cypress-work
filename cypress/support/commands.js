@@ -24,8 +24,19 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login',(name, password) =>{
-    cy.get('#username').type(name)
-    cy.get('#password').type(password)
-    cy.get('#loading > .btn').click()
+Cypress.Commands.add('login', (name, password) => {
+  cy.get('#username').type(name)
+  cy.get('#password').type(password)
+  cy.get('#loading > .btn').click()
+})
+
+Cypress.Commands.add('AddorVerify', (Item, inputfield) => {
+  if (Item == 'yes') {
+  } else if (Item == 'verify') {
+    cy.get(
+      `:nth-child(${inputfield}) > .row > .col-sm-8 > .btn-box > .msg`
+    ).should('be.visible')
+  } else {
+    cy.get(`input#shipping-${inputfield}`).type(Item)
+  }
 })
